@@ -1,0 +1,30 @@
+
+<section class="site-section" id="section-testimonial">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+              <h2 class="heading text-uppercase text-white">Достижения!</h2>
+
+              <div class="row justify-content-center">
+                <div class="col-md-12">
+
+                  <div class="owl-carousel slide-one-item home-slider">
+                        {% for test in testimonial_objects %}
+                    <div class="testimony text-center px-md-4">
+                      <figure class="mx-auto d-inline-block">
+                        <img src="{{ test.image.url }}" alt="Image" class="mx-auto img-fluid w-25 rounded-circle">
+                      </figure>
+                      <p class="text-white"><strong>{{ test.name.first_name }}</strong></p>
+                      <blockquote>
+                        <p>{{ test.text }}</p>
+                      </blockquote>
+                    </div>
+                    {% endfor %}
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
