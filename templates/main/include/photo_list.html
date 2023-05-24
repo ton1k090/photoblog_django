@@ -1,0 +1,19 @@
+{% block photo %}
+<section class="row align-items-stretch photos" id="section-photos">
+
+    <div class="col-12">
+        <div class="row align-items-stretch">
+        {% for photo in photo_list %}
+                <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
+                    <a href="" class="d-block photo-item" data-fancybox="gallery">
+                        <img src="{{ photo.image.url }}" alt="Image" class="img-fluid">
+                        <div class="photo-text-more">
+                            <span class="icon icon-search"></span>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section> <!-- #section-photos -->
+{% endblock photo %}
